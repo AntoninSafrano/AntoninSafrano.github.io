@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antonin Safrano — Portfolio</title>
+  <meta name="description" content="Portfolio d'Antonin Safrano — Ingénieur Informatique, ML & Full-Stack">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">A<span class="accent">.</span>S</a>
+    <div class="nav-links">
+      <a href="#about" class="nav-link">À propos</a>
+      <a href="#skills" class="nav-link">Compétences</a>
+      <a href="#projects" class="nav-link">Projets</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about" class="mobile-link">À propos</a>
+    <a href="#skills" class="mobile-link">Compétences</a>
+    <a href="#projects" class="mobile-link">Projets</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <canvas id="particles"></canvas>
+    <div class="hero-content">
+      <div class="hero-greeting reveal">Bonjour, je suis</div>
+      <h1 class="hero-name reveal">
+        <span class="char-wrap" data-text="Antonin">Antonin</span>
+        <span class="char-wrap accent" data-text="Safrano">Safrano</span>
+      </h1>
+      <div class="hero-titles reveal">
+        <span class="hero-tag">Ingénieur Informatique</span>
+        <span class="hero-sep">|</span>
+        <span class="hero-tag">ML & Full-Stack</span>
+        <span class="hero-sep">|</span>
+        <span class="hero-tag">Alternant Spie</span>
+      </div>
+      <a href="#projects" class="hero-cta reveal">
+        <span>Découvrir mes projets</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="parallax-bg" data-speed="0.3"></div>
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-num">01.</span> À propos
+      </h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>Étudiant en <strong>ING4 à ESIEE-IT</strong>, parcours Informatique & Applications, je suis passionné par le développement logiciel et le Machine Learning.</p>
+          <p>Actuellement <strong>alternant chez Spie</strong>, je combine théorie et pratique pour construire des solutions robustes et innovantes. Mon approche : un code propre, une architecture réfléchie, et une curiosité sans limite.</p>
+          <p>Quand je ne code pas, je m'intéresse aux nouvelles technologies, à l'IA et à l'optimisation de systèmes.</p>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-card-inner">
+            <div class="about-stat">
+              <span class="stat-number" data-target="4">0</span>
+              <span class="stat-label">Année d'études</span>
+            </div>
+            <div class="about-stat">
+              <span class="stat-number" data-target="10">0</span>
+              <span class="stat-label">Projets réalisés</span>
+            </div>
+            <div class="about-stat">
+              <span class="stat-number" data-target="7">0</span>
+              <span class="stat-label">Technologies maîtrisées</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-num">02.</span> Compétences
+      </h2>
+      <div class="skills-orbit reveal">
+        <div class="orbit-center">
+          <span>Tech</span>
+          <span>Stack</span>
+        </div>
+        <div class="skill-nodes">
+          <div class="skill-node" data-level="90" style="--i:0;--total:7">
+            <div class="node-inner">
+              <span class="node-name">Java</span>
+              <svg class="node-ring" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" class="ring-bg"/>
+                <circle cx="50" cy="50" r="45" class="ring-fill" style="--pct:90"/>
+              </svg>
+            </div>
+          </div>
+          <div class="skill-node" data-level="85" style="--i:1;--total:7">
+            <div class="node-inner">
+              <span class="node-name">C++</span>
+              <svg class="node-ring" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" class="ring-bg"/>
+                <circle cx="50" cy="50" r="45" class="ring-fill" style="--pct:85"/>
+              </svg>
+            </div>
+          </div>
+          <div class="skill-node" data-level="88" style="--i:2;--total:7">
+            <div class="node-inner">
+              <span class="node-name">Python</span>
+              <svg class="node-ring" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" class="ring-bg"/>
+                <circle cx="50" cy="50" r="45" class="ring-fill" style="--pct:88"/>
+              </svg>
+            </div>
+          </div>
+          <div class="skill-node" data-level="75" style="--i:3;--total:7">
+            <div class="node-inner">
+              <span class="node-name">ML</span>
+              <svg class="node-ring" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" class="ring-bg"/>
+                <circle cx="50" cy="50" r="45" class="ring-fill" style="--pct:75"/>
+              </svg>
+            </div>
+          </div>
+          <div class="skill-node" data-level="80" style="--i:4;--total:7">
+            <div class="node-inner">
+              <span class="node-name">PHP</span>
+              <svg class="node-ring" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" class="ring-bg"/>
+                <circle cx="50" cy="50" r="45" class="ring-fill" style="--pct:80"/>
+              </svg>
+            </div>
+          </div>
+          <div class="skill-node" data-level="92" style="--i:5;--total:7">
+            <div class="node-inner">
+              <span class="node-name">HTML/CSS/JS</span>
+              <svg class="node-ring" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" class="ring-bg"/>
+                <circle cx="50" cy="50" r="45" class="ring-fill" style="--pct:92"/>
+              </svg>
+            </div>
+          </div>
+          <div class="skill-node" data-level="85" style="--i:6;--total:7">
+            <div class="node-inner">
+              <span class="node-name">Git</span>
+              <svg class="node-ring" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" class="ring-bg"/>
+                <circle cx="50" cy="50" r="45" class="ring-fill" style="--pct:85"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-num">03.</span> Projets
+      </h2>
+      <div class="projects-grid">
+
+        <article class="project-card reveal" data-tilt>
+          <div class="card-glow"></div>
+          <div class="card-content">
+            <div class="card-header">
+              <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <a href="https://github.com/AntoninSafrano/EasyLine" target="_blank" class="card-link" aria-label="Voir sur GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+            <h3 class="card-title">EasyLine</h3>
+            <p class="card-desc">Application desktop Java pour la gestion de lignes de transport. Interface intuitive, architecture MVC robuste.</p>
+            <div class="card-tags">
+              <span class="tag">Java</span>
+              <span class="tag">Desktop</span>
+              <span class="tag">MVC</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-tilt>
+          <div class="card-glow"></div>
+          <div class="card-content">
+            <div class="card-header">
+              <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              <a href="https://github.com/AntoninSafrano/Easyline-project" target="_blank" class="card-link" aria-label="Voir sur GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+            <h3 class="card-title">Easyline Web</h3>
+            <p class="card-desc">Version web du projet EasyLine. Interface HTML/CSS responsive pour la gestion de transport en ligne.</p>
+            <div class="card-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Web</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-tilt>
+          <div class="card-glow"></div>
+          <div class="card-content">
+            <div class="card-header">
+              <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 17l6-6-6-6M12 19h8"/></svg>
+              <a href="https://github.com/AntoninSafrano/esiee_python" target="_blank" class="card-link" aria-label="Voir sur GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+            <h3 class="card-title">ESIEE Python Workshop</h3>
+            <p class="card-desc">Workshop Python réalisé à ESIEE-IT. Exercices pratiques couvrant les fondamentaux et concepts avancés.</p>
+            <div class="card-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Workshop</span>
+              <span class="tag">ESIEE</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-tilt>
+          <div class="card-glow"></div>
+          <div class="card-content">
+            <div class="card-header">
+              <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+              <a href="https://github.com/AntoninSafrano/resto-back" target="_blank" class="card-link" aria-label="Voir sur GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+            <h3 class="card-title">Resto Back</h3>
+            <p class="card-desc">Backend PHP complet pour une application de gestion de restaurant. API REST, base de données, authentification.</p>
+            <div class="card-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">Backend</span>
+              <span class="tag">REST API</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-num">04.</span> Contact
+      </h2>
+      <div class="contact-content reveal">
+        <p class="contact-text">Un projet en tête ? Une opportunité ? N'hésitez pas à me contacter.</p>
+        <div class="contact-links">
+          <a href="https://github.com/AntoninSafrano" target="_blank" class="contact-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://antoninsaf.me" class="contact-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            <span>antoninsaf.me</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Conçu & développé par <strong>Antonin Safrano</strong> — 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
